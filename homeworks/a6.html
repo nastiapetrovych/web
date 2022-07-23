@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head lang="en">
+        <title>
+            Holiday mode
+        </title>
+        <style>
+          @font-face {
+            font-family: easy_peasy ;
+            src: url(Cotton\ Cloud.ttf);
+          }
+          @font-face {
+            font-family: easy_peasy1;
+            src: url(Playbook-Fill.otf);
+          }
+
+body{
+  background-color: #182028;
+}
+div#conteiner{
+  display:grid;
+  grid-template-columns: repeat(var(--columns),1fr);
+  margin: 200px -40px;
+}
+img{
+  position: absolute;
+  width: 220px;
+  height: 360px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-60%);
+  box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.3);
+  transition-property: transform;
+  transition-duration: .4s;
+}
+
+img:hover{
+  transform: translateX(-40%) translateY(-70%) rotatez(25deg);
+}
+          h1{
+            width: 800px;
+            height: 200px;
+            color:lightblue;
+            font-family: easy_peasy;
+            letter-spacing: 3px;
+            line-height: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 30px;
+            text-align: center;
+          }
+          div#container {
+            height: 1200;
+            width: 1200;
+            position: relative;
+            padding-top: 50rem;
+            float: inline-end;
+            background-color: #182028;
+            display:grid;
+            margin: 200px -40px;
+            z-index: 100;
+          }
+          div#header{
+            width: auto;
+            height: auto;
+            font-size: 3em;
+            top: 2rem ;
+            z-index: 120;
+            padding-left: 450px;
+            text-align: center;
+            color: aquamarine;
+            font-family: easy_peasy1;
+            position: fixed;
+          }
+          div#header1{
+            color: aqua;
+            font-family: easy_peasy1;
+            padding-left: 150px;
+            padding-top: 1rem;
+            position: absolute;
+
+          }
+          div#book1{
+            position: absolute;
+            width: 43%;
+            height: 50%;
+            margin-left: auto;
+            top: 10px;
+            left: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 20px;
+            flex: left;
+            z-index: 80;
+            
+          }
+          div#book2{
+            position: absolute;
+            width: 43%;
+            height: 50%;
+            top: 10px;
+            left: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 20px;
+            flex: left;
+            z-index: 70;
+          }
+          div#book3{
+            position: absolute;
+            width: 43%;
+            height: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 20px;
+            float: left;
+            top: 360px;
+            left: 20px;
+            z-index: 90;
+            border-radius: 100%;
+          }
+          div#book4{
+            position: absolute;
+            width: 43%;
+            height: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 20px;
+            float: left;
+            z-index: 95;
+            top: 700px;
+            left: 20px;
+          }
+          div#book5{
+            position: absolute;
+            width: 43%;
+            height: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 20px;
+            float: left;
+            z-index: 40;
+            z-index: 96;
+            top: 1060px;
+            left: 20px;
+            
+          }
+          div#book6{
+            position: absolute;
+            width: 43%;
+            height: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 20px;
+            float: left;
+            top: 360px;
+            left: 400px;
+            z-index: 75;
+          }
+          div#book7{
+            position: absolute;
+            width: 43%;
+            height: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 20px;
+            float: left;
+            top: 700px;
+            left: 400px;
+            z-index: 80;
+          }
+          div#book8{
+            position: absolute;
+            width: 43%;
+            height: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 20px;
+            float: left;
+            top: 1060px;
+            left: 400px;
+            z-index: 85;
+          }
+          div#book9{
+            position: absolute;
+            width: 43%;
+            height: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 20px;
+            float: left;
+            top: 10px;
+            left: 780px;
+            z-index: 70;
+          }
+          div#book10{
+            position: absolute;
+            width: 43%;
+            height: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 20px;
+            float: left;
+            top: 360px;
+            left: 780px;
+            z-index: 75;
+          }
+          div#book11{
+            position: absolute;
+            width: 43%;
+            height: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 20px;
+            float: left;
+            top: 700px;
+            left: 780px;
+            z-index: 80;
+          }
+          div#book12{
+            position: absolute;
+            width: 43%;
+            height: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 20px;
+            float: left;
+            top: 1060px;
+            left: 780px;
+            z-index: 85;
+          }
+          h2 {
+            font-family: easy_peasy1;
+            color: rgb(234, 127, 255);
+            position: relative;
+            padding-left: 150px;
+            text-align: center;
+          }
+         </style>
+            </head>
+            <body>
+              <div id="container">
+                <div id="header">
+                  Choose a book for the summer!
+                </div>
+                <div id="book1">
+                  <img src="https://m.media-amazon.com/images/I/61peIJuTDEL.jpg" alt="book">
+                </div>
+                <div id="book2">
+                  <img src="https://m.media-amazon.com/images/I/51bJYD70UxL.jpg" alt="book">
+                </div>
+                <div id="book3">
+                  <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSWpDTdORF0rNiUIHUUn0WJYAQRPaCuREh-wI4xnsQcT0xSPd256VjhB18Do3IjIX0aCUoToSVAz2hnRDf-Swv-kNPJ2gIcKpYHdPMrLM4JUy9Eovxati_VnA&usqp=CAE" alt="book">
+                </div>
+                <div id="book4">
+                  <img src="https://m.media-amazon.com/images/I/41ld4Dr5jxL._AC_UY327_FMwebp_QL65_.jpg" alt="book">
+                </div>
+                <div id="book5">
+                  <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR9rm6lQMHL9CbQElGDy7d-1T8BSKUYqdQVlU2RGY2JDyyUKymGnEd4o6UQpayxStzW7J4kZbsw7bdJ74z7u18cmaTId771kCR5VwgSZAKyFWVUAFgawA5n&usqp=CAE" alt="book">
+                </div>
+                <div id="book6">
+                  <img src="https://m.media-amazon.com/images/I/51aO2PMYBsL.jpg" alt="book">
+                </div>
+                <div id="book7">
+                  <img src="https://m.media-amazon.com/images/I/51EVRNyoGZL.jpg" alt="book">
+                </div>
+                <div id="book8">
+                  <img src="https://m.media-amazon.com/images/I/41wLE1R803L.jpg" alt="book">
+                </div>
+                <div id="book9">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/book09.jpg" alt="book">
+                </div>
+                <div id="book10">
+                  <img src="https://m.media-amazon.com/images/I/41gYZQ5LPKL.jpg" alt="book">
+                </div>
+                <div id="book11">
+                  <img src="https://m.media-amazon.com/images/I/51B3AR0QDPL.jpg" alt="book">
+                </div>
+                <div id="book12">
+                  <img src="https://m.media-amazon.com/images/I/41S+jyDC6cL.jpg" alt="book">
+                </div>
+              </div>
+            </body>
+</html>
