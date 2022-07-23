@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Order a pizza
+        </title>
+        <style>
+            @font-face {
+                font-family: easy_peasy1;
+                src: url(All\ Star\ Resort.ttf);
+            }
+            @font-face {
+                font-family: pizza_style;
+                src: url(CollegiateBorderFLF.ttf);
+            }
+            @font-face {
+                font-family: easy;
+                src: url(Freshman.ttf);
+            }
+            body{
+                background-image: url("https://snehalbsawant.github.io/ADVC79/images/Bg.jpg");
+                position: fixed;
+                
+            }
+            div#main{
+                background-color: transparent;
+                height: 1000px;
+                width: 700px;
+                margin-left: 280px;
+                position: relative;
+            }
+            h1{
+                color: black;
+                font-family: easy;
+                font-size: 30px;
+                text-align: center;
+                letter-spacing: 2px;
+            }
+            h2{
+                color: #993955;
+                size: 35px;
+                text-align: center;
+                letter-spacing: 2px;
+                width: 240px;
+                margin-left: 200px;
+                font-family: easy_peasy1;
+                background-color: #FFFFF0;
+            }
+            h2#hea{
+                color: #993955;
+                size: 35px;
+                text-align: center;
+                letter-spacing: 2px;
+                width: 190px;
+                margin-left: 250px;
+                border-radius: 25px;
+                font-family: easy_peasy1;
+                background-color: #FFFFF0;
+            }
+            p{
+               background-color: #FFFFF0;
+               text-align: center;
+               font-family: easy;
+               size: 40px;
+               color: black;
+               width: 300px;
+               margin-left: 240px;
+            }
+            h2#topform{
+                color: #993955;
+                size: 35px;
+                text-align: center;
+                letter-spacing: 2px;
+                width: 212px;
+                margin-left: 250px;
+                border-radius: 25px;
+                font-family: easy_peasy1;
+                background-color: #FFFFF0;
+            }
+            h2#he{
+                color: #993955;
+                size: 35px;
+                text-align: center;
+                letter-spacing: 2px;
+                width: 235px;
+                margin-left: 250px;
+                border-radius: 25px;
+                font-family: easy_peasy1;
+                background-color: #FFFFF0;
+            }
+            div#form{
+                border: 3px dotted #993955;
+                border-radius: 16px;
+                height: 150px;
+                width: 200px;
+                margin-left: 250px;
+                text-align: center;
+                background-color: #FFFFF0;
+            }
+            select#size{
+            margin-left: 290px;
+            height: 30px;
+            width: 120px;
+            border: 3px dotted #993955;
+            border-radius: 9px;
+            }
+            div#img_div {
+                float: left;
+                width: 20%;
+                height: 20%;
+                padding: 5px;
+                position: fixed;
+            }
+            option{
+                font-family: 'Times New Roman', Times, serif;
+                color: midnightblue;
+                text-align: center;
+                background-color: #e9ecf5;
+                font-size: 15px;
+                border: 1px dotted black;
+            }
+            div#additional{
+                margin-left: 259px;
+                height: 30px;
+                width: 210px;
+                text-align: center;
+                border-radius: 9px;
+                background-color: #FFFFF0;
+                border: 3px dotted #993955;
+            }
+            input#counter{
+                margin-left: 315px;
+                background-color: transparent;
+                height: 40px;
+                size: 100px;
+                width: 120px;
+                border: 3px solid #993955;
+                font-family: easy;
+                letter-spacing: 2px;
+                text-align: center;
+                size: 40px;
+            }
+            input#counter:hover{
+                margin-left: 315px;
+                background-color: transparent;
+                height: 40px;
+                size: 100px;
+                width: 120px;
+                border: 3px solid #db1a51;
+                font-family: easy;
+                letter-spacing: 2px;
+                text-align: center;
+                size: 40px;
+            }
+        </style>
+        <script>
+            function count(){
+                counter = 0;
+                if (document.getElementById('size2').selected){
+                    counter += 10;
+                }
+                else if (document.getElementById('size3').selected){
+                    counter += 12.5;
+                }
+                else if (document.getElementById('size4').selected){
+                    counter += 15;
+                }
+                else{
+                    document.getElementById('hea').style.color = 'red'
+                    alert("Please, select a pizza size");
+                }
+                if (document.getElementById('toping1').checked){
+                    counter += 2;
+                }
+                if (document.getElementById('toping2').checked){
+                    counter += 1.5;
+                }
+                if (document.getElementById('toping3').checked){
+                    counter += 3.5;
+                }
+                if (document.getElementById('toping4').checked){
+                    counter += 1;
+                }
+                if (document.getElementById('toping5').checked){
+                    counter += 1.2;
+                }
+                if (document.getElementById('toping6').checked){
+                    counter += 1;
+                }
+                if (document.getElementById('toping7').checked){
+                    counter += 1.5;
+                }
+                counter = counter + (counter * (0.1125))
+                if (document.getElementById('Deliver').checked){
+                    counter += 3
+                    document.getElementById('info').innerHTML = "Your total is: $" + Math.round(counter, 2);
+                }
+                else if (document.getElementById('Pickup').checked){
+                    counter += 0
+                    document.getElementById('info').innerHTML = "Your total is: $" + counter.toFixed(2);
+                }
+                else{
+                    document.getElementById('he').style.color = 'red'
+                    alert("Please, select a type of delivery")
+                }
+            }
+        </script>
+     
+    </head>
+    <body>
+        <div id="img_div">
+			<img class="img-responsive" src="https://snehalbsawant.github.io/ADVC79/images/pizza.png">
+		</div>
+        <div id="main">
+          <h1>
+            Create your yummy pizza!
+            </h1>
+            <h2 id="hea">
+                Piza size:
+            </h2>
+          <select name="size" id="size">
+            <option value="size1">
+
+            </option>
+            <option value="size2" id="size2">
+                Small(10$)
+            </option>
+            <option value="size3" id="size3" >
+                Medium(12.5$)
+            </option>
+            <option value="size4" id="size4">
+                Large(15$)
+            </option>
+          </select>
+          <h2 id="topform">
+            Pizza topings:
+          </h2>
+          <div id="form">
+          <input type="checkbox" value="Cheese" id="toping1">
+          <label for="toping1">
+            Extra cheese(2$)
+          </label>
+          <br>
+          <input type="checkbox" value="Tomato" id="toping2">
+          <label for="toping2">
+            Tomatoes(1.5$)
+          </label>
+          <br>
+          <input type="checkbox" value="Olive" id="toping3">
+          <label for="toping3">
+            Olives(3.5$)
+          </label>
+          <br>
+          <input type="checkbox" value="Lettuce" id="toping4">
+          <label for="toping4">
+            Lettuce(1$)
+          </label>
+          <br>
+          <input type="checkbox" value="Sour cream sauce" id="toping5">
+          <label for="toping5">
+            Sour cream sauce(1.2$)
+          </label>
+          <br>
+          <input type="checkbox" value="Tomato sauce" id="toping6">
+          <label for="toping6">
+           Tomato sauce(1$)
+          </label>
+          <br>
+          <input type="checkbox" value="Mushrooms" id="toping7">
+          <label for="toping7">
+           Mushrooms(1.5$)
+          </label>
+        </div>
+        <h2 id="he">
+            Pizza delivery:
+        </h2>
+        <div id="additional">
+        <input type="radio" id="Deliver" name="type">
+            Deliver(3$)
+            &nbsp;
+        <input type="radio" id="Pickup" name="type">
+            Pickup
+        </div>
+        <br>
+        <input type="button" name="counter" id="counter" value="ORDER" onclick="count();">
+        <p id="info">       
+        </p>
+        </div>
+    </body>
+</html>
